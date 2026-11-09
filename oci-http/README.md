@@ -45,7 +45,7 @@ cd ../repo
 ./build_repo.sh
 ```
 
-Commit the new package and generated repository index files to GitHub. On the VM, `git pull`, then rebuild and restart the container so its checked-out `repo/` is included:
+Commit the new package and generated repository index files to GitHub. On the VM, `git pull`, then rebuild and restart the container so its checked-out `repo/` is included. Alternatively, rerun `sudo bash oci-http/bootstrap.sh <public-ip>` from the VM checkout; it pulls the latest repository and rebuilds the image:
 
 ```sh
 sudo docker stop ytlegacyfix
