@@ -6,6 +6,13 @@ The project contains the Theos tweak (`tweak/`), the playback/API proxy (`server
 
 The release package must be built with the proxy hostname assigned by the hosting provider. Do not publish a package built with `proxy.example.invalid` or a private LAN address.
 
+## Files
+
+- **Tweak source (Theos project):** [`tweak/`](tweak/)
+- **Built Cydia package:** [`YTLegacyFix 0.1.0-8 (.deb)`](repo/debs/com.example.ytlegacyfix_0.1.0-8-1+debug_iphoneos-arm.deb)
+- **Cydia package index:** [`repo/Packages`](repo/Packages)
+- **Cydia source URL:** <https://raw.githubusercontent.com/kideliofficial/ytlegacyfix/main/repo/>
+
 ## Current hosted setup
 
 - Cydia source: <https://raw.githubusercontent.com/kideliofficial/ytlegacyfix/main/repo/>
