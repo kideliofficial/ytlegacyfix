@@ -28,3 +28,8 @@ If the proxy code or `render.yaml` changes, open the `ytlegacyfix` Blueprint in 
 The cloud proxy disables request-body captures and writes logs to `/dev/null`; do not enable `YTLF_SAVE_DIR` or file logging on the public service. YouTube requests may contain account credentials.
 
 The package feed's HTTPS compatibility should be confirmed on the target iOS 7 device. YouTube may also behave differently when requests come from a datacenter IP.
+
+
+## iOS 7 host without a domain
+
+The current Render URLs require HTTPS, which the target iOS 7 device cannot open in Safari. For a direct-IP HTTP deployment, see [oci-http/README.md](oci-http/README.md). It uses an Oracle Cloud Always Free VM to serve both the proxy and the package feed from one public IPv4 address. The tweak package must be rebuilt for that address. Oracle may reclaim Always Free VMs it considers idle, so this is a no-cost option rather than an uptime guarantee.
