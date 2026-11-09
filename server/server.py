@@ -7,7 +7,7 @@ YTLegacyFix server.
 Run:  YTLF_PUBLIC_BASE=http://<LAN-IP>:8080 python server.py
 """
 import os, json, time, base64, logging, glob, threading
-from flask import Flask, request, Response, abort, stream_with_context, send_file
+from flask import Flask, request, Response, abort, stream_with_context, send_file, send_from_directory
 import requests
 import yt_dlp
 from playback import build_player, build_player_error
@@ -856,6 +856,13 @@ def debug_stream(vid):
 @app.route("/healthz")
 def healthz():
     return "ok"
+
+@app.route("/cydia/", defaults={"filename": "index.html"}, methods=["GET", "HEAD"])
+@app.route("/cydia/<path:filename>", methods=["GET", "HEAD"])
+def cydia_repo(filename):
+    """Serve the checked-in APT feed from the same origin as the HTTP proxy."""
+    repo_dir = os.path.join(os.path.dirname(__file__), "repo")
+    return send_from_directory(repo_dir, filename, conditional=True)
 
 # ---------------- optional: answer /player ourselves (JSON clients only) ----------------
 def player_response(vid):
