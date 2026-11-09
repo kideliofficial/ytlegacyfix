@@ -37,7 +37,7 @@ If the 32-bit build fails to link on the new Xcode, send me the error.
 Find the phone IP in Settings > Wi-Fi. Modern macOS SSH is too new for iOS 7-9, so use these flags:
     scp -O -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa packages/*.deb root@<PHONE-IP>:/tmp/
     ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa root@<PHONE-IP> "dpkg -i /tmp/*.deb && killall YouTube"
-Default root password is "alpine" - change it afterwards with `passwd`.
+Use the root password configured on your device. Change any factory-default password before enabling SSH.
 If SSH still refuses, add:  -o KexAlgorithms=+diffie-hellman-group1-sha1
 
 ## 6. Test and capture

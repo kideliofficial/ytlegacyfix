@@ -1,7 +1,7 @@
 Package: com.example.ytlegacyfix
 Name: YTLegacyFix
 Depends: mobilesubstrate (>= 0.9.5000)
-Version: 0.1.0-7
+Version: 0.1.0-8
 Architecture: iphoneos-arm
 Description: Work on iOS 7 ONLY.
  I have not tried it on iOS 8 or 9. This tweak fixes the YouTube app for iOS 7 instead of having to download an older version or some random ass janky YouTube client.
