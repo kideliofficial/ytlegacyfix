@@ -15,7 +15,7 @@ In the VM's public subnet security list, allow inbound TCP port 80 from `0.0.0.0
 
 ## Deploy the service
 
-From the VM, install Docker and Git, clone this repository, then run these commands from the repository root:
+From the VM, install Docker and Git, clone this repository, then run these commands from the repository root. For a one-command install or refresh, run `sudo bash oci-http/bootstrap.sh <public-ip>` from a checkout on the VM; it installs Docker, builds the image, and starts the service on port 80:
 
 ```sh
 sudo docker build -f oci-http/Dockerfile -t ytlegacyfix .
