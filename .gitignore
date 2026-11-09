@@ -1,0 +1,10 @@
+.DS_Store
+server/venv/
+server/cache/
+server/captures/
+server/capture.jsonl
+server/*.pre-cloud-backup
+tweak/.theos/
+tweak/obj/
+tweak/.last_build
+tweak/packages/

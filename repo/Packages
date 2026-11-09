@@ -1,0 +1,20 @@
+Package: com.example.ytlegacyfix
+Version: 0.1.0-7-1+debug
+Architecture: iphoneos-arm
+Maintainer: you
+Installed-Size: 620
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.example.ytlegacyfix_0.1.0-7-1+debug_iphoneos-arm.deb
+Size: 97290
+MD5sum: e3f50199de7102d22745dbf2b4b1be2d
+SHA1: be848074302410263c6756edadec67fd1a9d15c3
+SHA256: 3dac22a233c56aae93bff8180908fd12dc25f347a9de23d67b81284c6a8febcf
+Section: Tweaks
+Description: Work on iOS 7 ONLY.
+ I have not tried it on iOS 8 or 9. This tweak fixes the YouTube app for iOS 7 instead of having to download an older version or some random ass janky YouTube client.
+ It is very much a WIP since my main focus was to get video playback working on the app first. Any help would be appreciated.
+ DM me on discord: magnoliaremaker if you would like to help with this project.
+ Thank you guys for using this tweak
+Author: you
+Name: YTLegacyFix
+

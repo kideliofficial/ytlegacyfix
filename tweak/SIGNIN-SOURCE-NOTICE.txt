@@ -1,0 +1,3 @@
+Google sign-in compatibility code in signin.x and its account chooser are adapted from TubeReplacer by Preloading, licensed under GNU GPL version 3. The corresponding source files and license are included with this project. Upstream: https://github.com/Preloading/TubeReplacer/
+
+Changes for YTLegacyFix include the package namespace, account chooser path, and removal of diagnostic logging that could expose account or session data.

@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: ytlegacyfix-proxy
+    runtime: docker
+    plan: free
+    rootDir: server
+    dockerfilePath: Dockerfile
+    healthCheckPath: /healthz
+    envVars:
+      - key: YTLF_PUBLIC_BASE
+        fromService:
+          type: web
+          name: ytlegacyfix-proxy
+          envVarKey: RENDER_EXTERNAL_URL
+      - key: YTLF_LOG
+        value: /dev/null
+      - key: YTLF_SAVE_DIR
+        value: ""
+
+  - type: web
+    name: ytlegacyfix-cydia
+    runtime: static
+    rootDir: repo
+    buildCommand: echo "Publishing checked-in Cydia repository files"
+    staticPublishPath: .
